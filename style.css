@@ -419,6 +419,109 @@ a { color: inherit; }
   .recipes-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Генератор открыток ---------- */
+
+.pc-toggle {
+  display: inline-flex;
+  border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+  border-radius: 999px;
+  padding: .25rem;
+  gap: .25rem;
+  margin-top: 1.6rem;
+}
+.pc-toggle-btn {
+  font-family: var(--body);
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  padding: .55rem 1.2rem;
+  cursor: pointer;
+}
+.pc-toggle-btn.is-active { background: var(--accent); color: #1A0F12; }
+
+.pc-workspace {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 3.4rem);
+  align-items: start;
+  margin-top: 2.6rem;
+}
+
+.pc-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+
+.pc-form label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 1.15rem; }
+.pc-form input, .pc-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: .4rem;
+  font-family: var(--body);
+  font-size: 1rem;
+  color: var(--text);
+  background: color-mix(in srgb, var(--bg2) 55%, transparent);
+  border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent);
+  border-radius: 3px;
+  padding: .65rem .8rem;
+  resize: vertical;
+}
+.pc-form input:focus, .pc-form textarea:focus { outline: 2px solid var(--accent2); outline-offset: 2px; }
+
+.pc-form-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: .3rem; }
+
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+.btn-ghost:hover { background: color-mix(in srgb, var(--accent) 16%, transparent); }
+
+.pc-hint { font-size: .85rem; color: var(--muted); margin-top: 1.2rem; max-width: none; }
+
+.pc-card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+  border-radius: 6px;
+  background: radial-gradient(120% 90% at 32% 18%, var(--bg2) 0%, var(--bg) 72%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body.h .pc-card::after {
+  content: "";
+  position: absolute;
+  top: -28%;
+  right: -18%;
+  width: 58%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 40%, transparent), transparent 70%);
+  filter: blur(4px);
+}
+body.ny .pc-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,.5) 1px, transparent 1.4px);
+  background-size: 34px 34px;
+  opacity: .35;
+}
+
+.pc-card-mark { font-family: var(--display); font-weight: 700; font-size: .8rem; letter-spacing: .06em; color: var(--muted); position: relative; z-index: 1; }
+.pc-card-title { font-family: var(--display); font-weight: 900; font-size: clamp(1.5rem, 3.6vw, 2.1rem); color: var(--accent); margin: .8rem 0 0; position: relative; z-index: 1; }
+.pc-card-to { font-family: var(--display); font-weight: 700; font-size: 1.25rem; color: var(--accent2); margin: .9rem 0 .5rem; position: relative; z-index: 1; }
+.pc-card-msg { font-size: 1rem; color: var(--text); line-height: 1.6; max-width: none; flex: 1; margin: 0; position: relative; z-index: 1; }
+.pc-card-from { font-family: var(--display); font-weight: 700; font-size: .92rem; color: var(--accent); text-align: right; margin: 1rem 0 0; position: relative; z-index: 1; }
+
+@media (max-width: 860px) {
+  .pc-workspace { grid-template-columns: 1fr; }
+  .pc-field-row { grid-template-columns: 1fr; }
+}
+
 /* ---------- Подвал ---------- */
 
 .foot { position: relative; z-index: 1; padding: 2.5rem 0; border-top: 1px solid color-mix(in srgb, var(--muted) 22%, transparent); }
