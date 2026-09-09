@@ -522,6 +522,38 @@ body.ny .pc-card::after {
   .pc-field-row { grid-template-columns: 1fr; }
 }
 
+/* ---------- Галерея декора ---------- */
+
+.decor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem 1.6rem;
+  margin-top: 2rem;
+}
+
+.decor-card {
+  margin: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--bg2) 45%, transparent);
+  border: 1px solid color-mix(in srgb, var(--muted) 28%, transparent);
+}
+
+.decor-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.decor-card figcaption { padding: 1.1rem 1.3rem 1.3rem; }
+.decor-card h3 { color: var(--accent2); font-size: 1.05rem; margin-bottom: .4rem; }
+.decor-card p { margin: 0 0 .7rem; color: var(--text); font-size: .93rem; }
+
+.decor-credit { font-size: .78rem; color: var(--muted); margin: 0; }
+.decor-credit a { color: var(--muted); text-decoration: underline; }
+.decor-credit a:hover { color: var(--accent2); }
+
 /* ---------- Подвал ---------- */
 
 .foot { position: relative; z-index: 1; padding: 2.5rem 0; border-top: 1px solid color-mix(in srgb, var(--muted) 22%, transparent); }
