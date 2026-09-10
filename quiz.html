@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Викторина: праздники разных стран — Тридцать первое</title>
+<meta name="description" content="Одиннадцать вопросов о том, как Хэллоуин и Новый год отмечают в разных странах мира.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-48.png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Викторина: праздники разных стран — Тридцать первое">
+<meta property="og:description" content="Одиннадцать вопросов о том, как Хэллоуин и Новый год отмечают в разных странах мира.">
+<meta property="og:image" content="https://luna-port.ru/og-image.png">
+<meta property="og:url" content="https://luna-port.ru/quiz.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Викторина: праздники разных стран — Тридцать первое">
+<meta name="twitter:description" content="Одиннадцать вопросов о том, как Хэллоуин и Новый год отмечают в разных странах мира.">
+<meta name="twitter:image" content="https://luna-port.ru/og-image.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Onest:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="h">
+
+<header class="topbar">
+  <a class="mark" href="index.html">31&thinsp;/&thinsp;31</a>
+  <nav class="nav">
+    <a class="nav-link" href="halloween.html">Хэллоуин</a>
+    <a class="nav-link" href="newyear.html">Новый год</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="band" style="padding-top: clamp(3rem, 7vw, 5rem);">
+  <div class="wrap quiz-wrap">
+    <h1>Праздники разных стран</h1>
+    <p class="lede">Одиннадцать вопросов о том, как Хэллоуин и Новый год отмечают за пределами наших широт. В каждом вопросе нужно угадать страну.</p>
+
+    <div class="quiz-progress">
+      <span id="quizStep">Вопрос 1 из 11</span>
+      <span class="quiz-progress-bar"><span class="quiz-progress-fill" id="quizProgressFill"></span></span>
+    </div>
+
+    <div class="quiz-card" id="quizCard">
+      <span class="quiz-badge" id="quizBadge">Хэллоуин</span>
+      <p class="quiz-question" id="quizQuestion">Загрузка вопроса…</p>
+      <div class="quiz-options" id="quizOptions"></div>
+      <p class="quiz-explain" id="quizExplain" hidden></p>
+      <button class="btn quiz-next" id="quizNext" hidden type="button">Следующий вопрос</button>
+    </div>
+
+    <div class="quiz-card quiz-result" id="quizResult" hidden>
+      <p class="quiz-result-score" id="quizScore">0 / 11</p>
+      <p class="quiz-result-msg" id="quizMsg"></p>
+      <div class="quiz-result-actions">
+        <button class="btn btn-ghost" id="quizRestart" type="button">Пройти заново</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Тридцать первое</p>
+    <nav class="foot-nav">
+      <a href="index.html">На главную</a>
+      <a href="halloween.html">Хэллоуин</a>
+      <a href="newyear.html">Новый год</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
